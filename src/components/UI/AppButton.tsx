@@ -1,11 +1,8 @@
-
-
-
-export const AppButton = () => {
+export const AppButton = props => {
+	const { buttonText } = props
 	return (
 		<button disabled type='button' id='next-btn'>
-			Далее
+			{buttonText}
 		</button>
-	) 
+	)
 }
-

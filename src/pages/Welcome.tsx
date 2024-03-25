@@ -1,51 +1,34 @@
-import { AppButton } from "../components/UI/AppButton";
-import { Heading } from "../components/Typography/Heading";
-import { AppInput } from "../components/UI/AppInput";
-import { AppInput2 } from "../components/UI/AppInput";
+import { AppButton } from '../components/UI/AppButton'
+import { Heading } from '../components/Typography/Heading'
+import { AppInput } from '../components/UI/AppInput'
 
 const Welcome = () => {
-  return (
+	return (
 		<div className='container'>
 			<div className='wrapper'>
 				<div className='welcome'>
-					<Heading />
-					{/* <h1>Добро пожаловать в квиз от лучшего учебного центра</h1> */}
+					<Heading headingText='Добро пожаловать в квиз от лучшего учебного центра' />
 					<form className='welcome__form'>
-						<AppInput />
-						{/* <label className="input-wrapper" htmlFor="username">
-              Ваше имя
-              <input
-                required
-                type="text"
-                name="username"
-                id="username"
-                placeholder="Ваш ответ"
-              />
-              <span id="error-message">
-                Введите имя
-              </span>
-            </label> */}
-						<AppInput2 />
-						{/* <label className='input-wrapper' htmlFor='phone'>
-							Ваш номер
-							<input
-								required
-								type='tel'
-								name='phone'
-								id='phone'
-								placeholder='+998 9- --- -- -- '
-							/>
-							<span id='error-message'>Введите номер в правильном формате</span>
-						</label> */}
-						<AppButton />
-						{/* <button disabled type="button" id="next-btn">
-              Далее
-            </button> */}
+						<AppInput
+							inputLabel='Ваше имя'
+							id='username'
+							inputType='text'
+							inputPlacaholder='Ваш ответ'
+							errorMessage='Введите имя'
+						/>
+						<AppInput
+							inputLabel='Ваш номер'
+							id='phone'
+							inputType='tel'
+							inputPlacaholder='+998 9- --- -- -- '
+							errorMessage='Введите номер в правильном формате'
+						/>
+						<AppButton buttonText='Далее' />
 					</form>
 				</div>
 			</div>
 		</div>
 	)
-};
+}
 
-export default Welcome;
+export default Welcome

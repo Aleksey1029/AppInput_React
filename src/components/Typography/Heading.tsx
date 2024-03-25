@@ -1,9 +1,9 @@
-
-
-export const Heading = () => {
-	return <h1>Добро пожаловать в квиз от лучшего учебного центра</h1>
+export const Heading = props => {
+	const { headingText } = props
+	return <h1>{headingText}</h1>
 }
 
-export const Heading2 = () => {
-    return <h2>1. Где вы узнали про нашу школу?</h2>
+export const Heading2 = (props) => {
+	const { headingText2 } = props
+	return <h2>{headingText2}</h2>
 }
